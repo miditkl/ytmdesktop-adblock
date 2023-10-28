@@ -20,25 +20,25 @@
 #### Windows
 - ~~Winget: ```winget install "YouTube Music Desktop App"``` or ```winget install Ytmdesktop.Ytmdesktop```~~
 - ~~Chocolatey: ```choco install ytmdesktop```~~
-- Binaries: <https://github.com/realSnosh/ytmdesktop/releases>
+- Binaries: <https://github.com/realSnosh/ytmdesktop-adblock/releases>
 
 #### Linux
 - ~~Arch Linux (AUR): <https://aur.archlinux.org/packages/ytmdesktop-git>~~
 - ~~Snap: <https://snapcraft.io/youtube-music-desktop-app>~~
-- Binaries: <https://github.com/realSnosh/ytmdesktop/releases>
+- Binaries: <https://github.com/realSnosh/ytmdesktop-adblock/releases>
 
 #### Mac
 - ~~Brew: ```brew install --cask ytmdesktop-youtube-music```~~
-- Binaries: <https://github.com/realSnosh/ytmdesktop/releases>
+- Binaries: <https://github.com/realSnosh/ytmdesktop-adblock/releases>
 
 # Installing ytmdesktop
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```sh
 # Clone this repository
-git clone https://github.com/realSnosh/ytmdesktop.git
+git clone https://github.com/realSnosh/ytmdesktop-adblock.git
 # Go into the directory
-cd ytmdesktop
+cd ytmdesktop-adblock
 ```
 ##### And:
 ```sh
