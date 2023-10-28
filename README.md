@@ -1,5 +1,5 @@
 # YouTube Music Desktop App
-## The team is working on a V2 version of YTM Desktop which is a complete re-write of the project. Please see [this issue](https://github.com/ytmdesktop/ytmdesktop/issues/1139) for more details
+## This is an unofficial ytmdesktop version. It includes an adblocker, nothing more.
 <img type="image/png" src="https://ytmdesktop.app/img/product/main_5.png" alt="window"/>
 
 [![Discord][discord-img]][discord-url]
@@ -18,18 +18,18 @@
 </a>
 
 #### Windows
-- Winget: ```winget install "YouTube Music Desktop App"``` or ```winget install Ytmdesktop.Ytmdesktop```
-- Chocolatey: ```choco install ytmdesktop```
-- Binaries: <https://github.com/ytmdesktop/ytmdesktop/releases>
+- ~~Winget: ```winget install "YouTube Music Desktop App"``` or ```winget install Ytmdesktop.Ytmdesktop```~~
+- ~~Chocolatey: ```choco install ytmdesktop```~~
+- Binaries: <https://github.com/realSnosh/ytmdesktop/releases>
 
 #### Linux
-- Arch Linux (AUR): <https://aur.archlinux.org/packages/ytmdesktop-git>
-- Snap: <https://snapcraft.io/youtube-music-desktop-app>
-- Binaries: <https://github.com/ytmdesktop/ytmdesktop/releases>
+- ~~Arch Linux (AUR): <https://aur.archlinux.org/packages/ytmdesktop-git>~~
+- ~~Snap: <https://snapcraft.io/youtube-music-desktop-app>~~
+- Binaries: <https://github.com/realSnosh/ytmdesktop/releases>
 
 #### Mac
-- Brew: ```brew install --cask ytmdesktop-youtube-music```
-- Binaries: <https://github.com/ytmdesktop/ytmdesktop/releases>
+- ~~Brew: ```brew install --cask ytmdesktop-youtube-music```~~
+- Binaries: <https://github.com/realSnosh/ytmdesktop/releases>
 
 # Installing ytmdesktop
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
