@@ -36,7 +36,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```sh
 # Clone this repository
-git clone https://github.com/ytmdesktop/ytmdesktop.git
+git clone https://github.com/realSnosh/ytmdesktop.git
 # Go into the directory
 cd ytmdesktop
 ```
