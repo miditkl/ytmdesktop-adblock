@@ -86,7 +86,7 @@ function getTrackInfo() {
     getUrl(webContents)
     setPercent(player.seekbarCurrentPosition, track.duration)
     isVideo(webContents)
-    isAdvertisement(webContents)
+    // isAdvertisement(webContents) // not needed, since there should be no Ads.
     return track
 }
 

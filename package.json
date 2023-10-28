@@ -1,7 +1,7 @@
 {
-    "name": "youtube-music-desktop-app",
-    "version": "1.14.2",
-    "description": "YouTube Music Desktop App",
+    "name": "youtube-music-ab-desktop-app",
+    "version": "1.14.2+ab",
+    "description": "YouTube Music Desktop App with an AdBlocker",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
@@ -15,13 +15,14 @@
         "publish:mac": "command -v git > /dev/null 2>&1 && sed -e  \"s/DEVELOPMENT_BUILD/`git rev-parse HEAD | cut -c1-8`/g\" commit_hash.js.tpl >commit_hash.js; npx electron-builder --mac -p always --config electron-builder64.yml",
         "publish:lin": "command -v git > /dev/null 2>&1 && sed -e  \"s/DEVELOPMENT_BUILD/`git rev-parse HEAD | cut -c1-8`/g\" commit_hash.js.tpl >commit_hash.js; npx electron-builder --linux -p always --config electron-builder64.yml"
     },
-    "repository": "https://github.com/ytmdesktop/ytmdesktop",
+    "repository": "https://github.com/realSnosh/ytmdesktop-adblock",
     "keywords": [
         "Electron",
         "Youtube",
-        "Music"
+        "Music",
+        "AdBlock"
     ],
-    "author": "Adler Luiz <adlerluiz10@gmail.com>",
+    "author": "Adler Luiz, Midian T.E.",
     "license": "CC0-1.0",
     "husky": {
         "hooks": {
@@ -39,6 +40,7 @@
         "pretty-quick": "^2.0.2"
     },
     "dependencies": {
+        "@cliqz/adblocker-electron": "^1.26.6",
         "ace-builds": "^1.4.12",
         "discord-rpc": "^3.1.4",
         "electron-canvas-to-buffer": "^2.0.0",

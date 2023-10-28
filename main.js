@@ -27,6 +27,9 @@ const { checkWindowPosition, doBehavior } = require('./src/utils/window')
 const fileSystem = require('./src/utils/fileSystem')
 const Vibrant = require('node-vibrant')
 
+const { ElectronBlocker, fullLists } = require('@cliqz/adblocker-electron')
+const fetch = require('node-fetch') // AD-Blocker relevant
+
 const __ = require('./src/providers/translateProvider')
 const assetsProvider = require('./src/providers/assetsProvider')
 const scrobblerProvider = require('./src/providers/scrobblerProvider')
@@ -264,6 +267,40 @@ async function createWindow() {
         Yes, I am confused as you are, but hopefully that clears up some confusion
     */
     mainWindow = new BrowserWindow(browserWindowConfig)
+
+    // ------------------------- AD-BLOCKER -------------------------
+
+    const blocker = await ElectronBlocker.fromLists(fetch, fullLists, {
+        enableCompression: true,
+    })
+
+    blocker.enableBlockingInSession(mainWindow.webContents.session)
+
+    blocker.on('request-blocked', (request) => {
+        console.log('blocked', request.tabId, request.url)
+    })
+
+    blocker.on('request-redirected', (request) => {
+        console.log('redirected', request.tabId, request.url)
+    })
+
+    blocker.on('request-whitelisted', (request) => {
+        console.log('whitelisted', request.tabId, request.url)
+    })
+
+    blocker.on('csp-injected', (request) => {
+        console.log('csp', request.url)
+    })
+
+    blocker.on('script-injected', (script, url) => {
+        console.log('script', script.length, url)
+    })
+
+    blocker.on('style-injected', (style, url) => {
+        console.log('style', style.length, url)
+    })
+
+    // ------------------------- AD-BLOCKER END-------------------------
 
     mainWindow.webContents.session.webRequest.onBeforeSendHeaders(
         {
@@ -2294,3 +2331,7 @@ const updater = require('./src/providers/updateProvider')
 const { getTrackInfo } = require('./src/providers/infoPlayerProvider')
 const { ipcRenderer } = require('electron/renderer')
 //const {UpdaterSignal} = require('electron-updater');
+
+ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
+    blocker.enableBlockingInSession(session.defaultSession)
+}) // Ad-blocker relevant
