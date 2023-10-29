@@ -1,4 +1,5 @@
 # YouTube Music Desktop App
+## This is an unofficial ytmdesktop version. It includes an adblocker, nothing more.
 ### Now with a Fresh new Codebase 😉
 
 <img type="image/png" src="https://placehold.co/1920x1080/EEE/31343C/?text=Screenshot" alt="window"/>
@@ -15,7 +16,7 @@
 
 # ⬇️ Download at
 <a href="https://repology.org/project/ytmdesktop/versions">
-	<img type="image/svg" align="right" src="https://repology.org/badge/vertical-allrepos/ytmdesktop.svg" alt="Packaging status"/>
+	<img type="image/svg" src="https://repology.org/badge/vertical-allrepos/ytmdesktop.svg" alt="Packaging status"/>
 </a>
 
 ### Current V2 Builds are not actually here yet.
@@ -25,7 +26,7 @@
 - Winget: ```winget install "YouTube Music Desktop App"``` or ```winget install Ytmdesktop.Ytmdesktop```
 - Chocolatey: ```choco install ytmdesktop```
 -->
-- Binaries: <https://github.com/ytmdesktop/ytmdesktop/releases>
+- Binaries: <https://github.com/realSnosh/ytmdesktop-adblock/releases>
 
 #### Linux
 <!--
@@ -33,21 +34,21 @@
 - Arch Linux (AUR): <https://aur.archlinux.org/packages/ytmdesktop-git>
 - Snap: <https://snapcraft.io/youtube-music-desktop-app>
 -->
-- Binaries: <https://github.com/ytmdesktop/ytmdesktop/releases>
+- Binaries: <https://github.com/realSnosh/ytmdesktop-adblock/releases>
 
 #### Mac
 <!--
 ### UPDATE THESE PLATFORMS ###
 - Brew: ```brew install --cask ytmdesktop-youtube-music```
 -->
-- Binaries: <https://github.com/ytmdesktop/ytmdesktop/releases>
+- Binaries: <https://github.com/realSnosh/ytmdesktop-adblock/releases>
 
 # Developing
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js (v20)](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```sh
 # Clone this repository
-git clone https://github.com/ytmdesktop/ytmdesktop.git
+git clone https://github.com/realSnosh/ytmdesktop-adblock.git
 # Go into the directory
 cd ytmdesktop
 ```
@@ -66,7 +67,7 @@ yarn start
 To build for your platform you need to run `yarn make`, however please see the information below regarding the required additionally Software, Tools and Packages which are needed to successfully package into a nice installer file.
 
 ## Windows
-To download the full suite of Tools/Software needed to build the app it is recommended to install the suite of build tools that electron provide which includes Visual Studio, Python and other tools.
+To download the full suite of Tools/Software needed to build the app it is recommended to install the suite of build tools that electron provides which includes Visual Studio, Python and other tools.
 
 `npm i -g @electron/build-tools`
 
@@ -80,7 +81,7 @@ Building the project on Linux only requires you to install:
 - For building for Debian based Linux Distros like Ubuntu, you will need to install `fakeroot` and `dpkg`
 - For building for RedHat based Linux Distros like Fedora, you will need to install `rpm` or `rpm-build`
 
-*please note that by default both packages are built if you try to building this application on a linux distro*
+*please note that by default both packages are built if you try to build this application on a linux distro*
 
 <!--
 ### Note to the note, I suspect this has been fixed now, testing myself I was able to run the software without anything extra, although did have to sepecify `--disable-gpu` to run.

@@ -1,8 +1,8 @@
 {
-  "name": "youtube-music-desktop-app",
+  "name": "youtube-music-ab-desktop-app",
   "productName": "YouTube Music Desktop App",
-  "version": "2.0.0-rc.5",
-  "description": "YouTube Music Desktop App",
+  "version": "2.0.0-rc.5-ab",
+  "description": "YouTube Music Desktop App with an AdBlocker",
   "main": ".webpack/main",
   "private": true,
   "scripts": {
@@ -18,13 +18,20 @@
     "prettier:fix": "prettier --write *.{ts,tsx,vue}",
     "postinstall": "husky install"
   },
-  "keywords": [],
+  "repository": "https://github.com/realSnosh/ytmdesktop-adblock",
+  "keywords": [
+    "Electron",
+    "Youtube",
+    "Music",
+    "AdBlock"
+  ],
   "author": {
     "name": "NovusTheory",
     "email": "novustheory@gmail.com"
   },
   "license": "GPL-3.0-only",
   "devDependencies": {
+    "@cliqz/adblocker-electron": "^1.26.6",
     "@electron-forge/cli": "~6.3.0",
     "@electron-forge/maker-deb": "~6.3.0",
     "@electron-forge/maker-rpm": "~6.3.0",
@@ -36,9 +43,11 @@
     "@electron-forge/publisher-github": "~6.3.0",
     "@electron/fuses": "^1.6.2",
     "@types/node": "^18.18.7",
+    "@types/node-fetch": "^2.6.7",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "@vercel/webpack-asset-relocator-loader": "1.7.3",
+    "cross-fetch": "^4.0.0",
     "css-loader": "^6.8.1",
     "electron": "27.0.2",
     "eslint": "^8.52.0",
@@ -50,6 +59,7 @@
     "git-revision-webpack-plugin": "5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
+    "node-fetch": "^3.3.2",
     "node-loader": "^2.0.0",
     "prettier": "^3.0.3",
     "style-loader": "^3.3.3",
